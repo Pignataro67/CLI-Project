@@ -1,23 +1,25 @@
 class DailyWorkout::CLI
 
   def call
-    puts "Today's Workouts:"
     list_workouts
     menu
-    good_bye
+    goodbye
   end
 
   def list_workouts
+    puts "Today's Workouts:"
     puts <<-DOC
     1. Legs
     2. Back
     3. Chest
     DOC
+    @workouts = DailyWorkout::Workout.today
   end
 
   def menu
-    puts "Please select the desired workout by number or type list to see the workouts again or type exit to exit:"
+    input = nil
     while input != "exit"
+        puts "Please select the desired workout by number or type list to see the workouts again or type exit to exit:"
       input = gets.strip.downcase
       case input
       when "1"
@@ -26,6 +28,10 @@ class DailyWorkout::CLI
         puts "more info on Workout 2..."
       when "3"
         puts "more info on Workout 3..."
+      when "list"
+        list_workouts
+      else
+        puts "Pick a workout or I will crush you, like a little walnut!!!"
       end
     end
   end
