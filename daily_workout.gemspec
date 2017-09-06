@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Pat  Pignataro'"]
   spec.email         = ["'pat6284@msn.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{This gem is a small workout application that can give the user workout ideas.}
+  spec.description   = %q{This gem is a small workout application that will give the user workout ideas. The application will give the bodypart name the workout is for, exercise and sets and reps.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -31,4 +31,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry"
+
+  spec.add_dependency "nokogiri"
 end
