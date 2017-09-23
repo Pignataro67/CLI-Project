@@ -20,7 +20,7 @@ class DailyWorkout::CLI
         puts "Please select the desired workout by number or type list to see the workouts again or type exit to exit:"
       input = gets.strip.downcase
 
-      if input.to_i > 0
+      if input.to_i.between?(1, 4)
       the_workout = @workouts[input.to_i-1]
         puts  "#{the_workout.name} - #{the_workout.exercise} - #{the_workout.sets_and_reps}"
       elsif input == "list"
