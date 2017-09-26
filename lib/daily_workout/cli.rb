@@ -17,7 +17,7 @@ class DailyWorkout::CLI
   def menu
     input = nil
     while input != "exit"
-        puts "Please select the desired workout by number or type list to see the workouts again or type exit to exit:"
+      puts "Please select the desired workout by number or type list to see the workouts again or type exit to exit:"
       input = gets.strip.downcase
 
       if input.to_i.between?(1, 5)
