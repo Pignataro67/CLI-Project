@@ -1,8 +1,6 @@
 # DailyWorkout
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/daily_workout`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Daily Workout is a selection of different exercises for the major muscle groups, Legs, Back, Chest, Shoulders and core! If you're looking for a "sun's out, guns out" routine you're in the wrong place! This is more of a "sun's out, buns out" workout!
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This is meant to be used by selecting a workout by number and enjoying. Any other usage is strictly not advised. Practice safe sets!
 
 ## Development
 
@@ -33,4 +31,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/'pat6284-52541'/daily_workout.
-
