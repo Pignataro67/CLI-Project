@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "daily_workout"
+require_relative "../lib/daily_workout"
 
 #require './lib/daily_workout'
 
- DailyWorkout::CLI.new.call
+DailyWorkout::CLI.new.call
