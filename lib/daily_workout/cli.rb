@@ -1,6 +1,7 @@
 class DailyWorkout::CLI
 
   def call
+    DailyWorkout::Scraper.scrape_work_outs
     list_workouts
     menu
     goodbye
@@ -8,7 +9,7 @@ class DailyWorkout::CLI
 
   def list_workouts
     puts "Today's Workouts:"
-    @workouts = DailyWorkout::Exercise_workout.today
+    @workouts = DailyWorkout::Exercise_workout.all
     @workouts.each.with_index(1) do |workout, x|
       puts "#{x}. #{workout.name}"
     end
@@ -20,7 +21,7 @@ class DailyWorkout::CLI
       puts "Please select the desired workout by number or type list to see the workouts again or type exit to exit:"
       input = gets.strip.downcase
 
-      if input.to_i.between?(1, 5)
+      if input.to_i > 0 && input.to_i <= DailyWorkout::Exercise_workout.all.count
         the_workout = @workouts[input.to_i-1]
         puts  "#{the_workout.name} - #{the_workout.exercise} - #{the_workout.sets_and_reps}"
       elsif input == "list"
